@@ -1,0 +1,22 @@
+<div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <div class="col-md-3">
+            <div class="list-group shadow-sm">
+                <div class="navbar-nav">
+                    <a routerLink="profile" routerLinkActive="active"
+                        class="list-group-item list-group-item-action">Profile</a>
+                    <a routerLink="settings" routerLinkActive="active"
+                        class="list-group-item list-group-item-action">Settings</a>
+                    <a routerLink="reports" routerLinkActive="active"
+                        class="list-group-item list-group-item-action">Reports</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-9">
+        <div class="card shadow-sm p-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
