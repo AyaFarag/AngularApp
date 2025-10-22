@@ -8,5 +8,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './profile-componant.css'
 })
 export class ProfileComponant {
+   username: string = 'Ibrahim ahmed ';
+  email: string = 'a@gmail.com';
 
 }

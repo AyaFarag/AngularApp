@@ -1,1 +1,29 @@
 <p>experience-componant works!</p>
+
+<div class="container mt-4">
+  <h2 class="text-primary">{{ title }}</h2>
+
+  <div *ngIf="experiences.length > 0; else noExperience">
+    <table class="table table-striped mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Years</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let exp of experiences">
+          <td>{{ exp.company }}</td>
+          <td>{{ exp.role }}</td>
+          <td>{{ exp.years }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #noExperience>
+    <p class="text-muted">No work experience listed.</p>
+  </ng-template>
+</div>
+

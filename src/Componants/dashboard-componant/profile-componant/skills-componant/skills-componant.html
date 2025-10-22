@@ -1,1 +1,24 @@
 <p>skills-componant works!</p>
+
+<div class="container mt-4">
+  <h2 class="text-primary">{{ title }}</h2>
+
+  <div *ngIf="skills.length > 0; else noSkills">
+    <ul class="list-group mt-3">
+
+      <li *ngFor="let skill of skills" class="list-group-item d-flex justify-content-between">
+        <span>{{ skill.name }}</span>
+        <span class="badge bg-success">{{ skill.level }}</span>
+      </li>
+      
+    </ul>
+  </div>
+
+  <ng-template #noSkills>
+    <p class="text-muted">No skills available.</p>
+  </ng-template>
+</div>
+
+
+<!-- if array is empty < no skills > -->
+ <!--  for skills and show  -->

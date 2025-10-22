@@ -1,8 +1,51 @@
 <div class="text-center mt-5">
   <h2 class="text-primary fw-bold">Welcome Home!</h2>
   <p class="lead">This is the starting page of your Angular routing project.</p>
-  <img src="https://cdn-icons-png.flaticon.com/512/1946/1946433.png" width="120" class="my-3">
+
   <p>
     <a routerLink="dashboard" class="btn btn-primary">Go to Dashboard</a>
   </p>
+
+  <div>
+    <h1> Skills</h1>
+
+
+    <div *ngIf="skills.length > 0; else noSkills">
+
+      <ul >
+        <li *ngFor="let item of skills">
+         <p> {{ item }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <ng-template #noSkills>
+
+      <h1> No skills added</h1>
+    </ng-template>
+
+
+  </div>
+
+  <!-- Interpolation  -->
+  <!-- <h1>   {{ name }}  </h1>
+  <h1>   {{ email }}       </h1>
+  <h1>  {{ subject }}   </h1> -->
+
+
+
+  <!-- property binding -->
+  <!-- <img [src]="imageURL" />    -->
+
+
+  <!-- <input type="text" [value]="name" > -->
+
+  <!--  Event binding  -->
+  <!-- <button (click)="buttonClicked()" >  Save </button> -->
+
+
+
+
+
+
 </div>
