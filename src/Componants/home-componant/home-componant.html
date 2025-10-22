@@ -27,6 +27,21 @@
 
   </div>
 
+  <div>
+    <p> {{ productDetails.title }}</p>
+    <p> {{ productDetails.description }}</p>
+    <p> {{ productDetails.price }}</p>
+    <p> {{ productDetails.quantity }}</p>
+  </div>
+
+
+  <div *ngFor="let item of products">
+    <p> {{ item.title}} </p>
+    <p> {{ item.description}} </p>
+    <p> {{ item.price}} </p>
+    <p> {{ item.quantity}} </p>
+  </div>
+
   <!-- Interpolation  -->
   <!-- <h1>   {{ name }}  </h1>
   <h1>   {{ email }}       </h1>
